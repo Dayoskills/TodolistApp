@@ -39,7 +39,7 @@ $result = mysqli_query($conn, $sql2);
         <?php
         $count= 1;
         while ($row = mysqli_fetch_array($result)) {
-            # code...
+            
         ?>
 
         <tr>
