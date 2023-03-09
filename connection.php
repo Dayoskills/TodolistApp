@@ -3,8 +3,8 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "todo_app";
+$dbname = "todolist_application";
 
-$conn = mysqli_connect($servername, $username, "", $dbname);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 ?>

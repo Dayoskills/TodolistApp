@@ -14,7 +14,7 @@
     <div class= "row justify-content-center m-auto shadow bg-white mt-3 py-3 col-md-6">
         <h3 class="text-center text-primary font-monospace">TODO LIST</h3>
         <div class="col-8">
-            <input type="text" required name= "list" class= "form-control" id="">
+            <input type="text" required name= "name" class= "form-control" id="">
         </div>
         <div class="col-2">
             <button class="btn btn-outline-primary">Add</button>
@@ -26,7 +26,7 @@
 <!-- select data from database -->
 <?php
 include ("connection.php");
-$sql2 = "SELECT * FROM `todolist`";
+$sql2 = "SELECT * FROM `tasks`";
 $result = mysqli_query($conn, $sql2);
 
 ?>
@@ -39,13 +39,14 @@ $result = mysqli_query($conn, $sql2);
         <?php
         $count= 1;
         while ($row = mysqli_fetch_array($result)) {
-            # code...
+            
         ?>
 
         <tr>
            <td><?php echo $count; ?></td>
-           <td><?php echo $row['list']; ?></td>
-           <td style="width: 10%;"> <a href="delete.php?del_list=  <?php echo $row['id']; ?>" class="btn btn-outline-danger">Delete</a></td> 
+           <td><?php echo $row['name']; ?></td>
+           <td><?php echo $row['created_at']; ?></td>
+           <td style="width: 10%;"> <a href="delete.php?delete=  <?php echo $row['id']; ?>" class="btn btn-outline-danger">Delete</a></td> 
         </tr>
         <?php $count++; } ?>
     </tbody>
@@ -53,4 +54,4 @@ $result = mysqli_query($conn, $sql2);
 </div>
 
 </body>
-</html> 
+</html>
