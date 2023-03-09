@@ -1,3 +1,4 @@
+<!--connection-->
 <?php
 include ("connection.php");
 $List = $_POST['list'];
