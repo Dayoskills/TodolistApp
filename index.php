@@ -47,6 +47,7 @@ $result = mysqli_query($conn, $sql2);
            <td><?php echo $row['name']; ?></td>
            <td><?php echo $row['created_at']; ?></td>
            <td style="width: 10%;"> <a href="delete.php?delete=  <?php echo $row['id']; ?>" class="btn btn-outline-danger">Delete</a></td> 
+           <td style="width: 10%;"> <a href="update_one.php?update=  <?php echo $row['id']; ?>" class="btn btn-outline-danger">Update</a></td>
         </tr>
         <?php $count++; } ?>
     </tbody>
