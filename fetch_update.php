@@ -15,7 +15,7 @@ $Rdata = mysqli_query($conn, "select * from tasks where id = $id");
 $data = mysqli_fetch_array($Rdata);
 ?>
 <body class="bg-info">
-<form action="update_two.php" method="POST">
+<form action="update.php" method="POST">
     <div class="container">
         <div class="row justify-content-center m-auto shadow bg-white mt-3 py-3 col-md-6">
             <h3 class="text-center text-primary font-monospace">Update</h3>  
